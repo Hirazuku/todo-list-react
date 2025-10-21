@@ -1,15 +1,13 @@
 import Form from "./Form";
 import Tasks from "./Tasks";
+import Buttons from "./Buttons";
 
 const tasks = [
-  {id: 1, content: "kawa", done: false},
-  {id: 2, content: "herbata", done: true},
+  {id: 1, content: "kawa", done: true},
+  {id: 2, content: "herbata", done: false},
 ];
 
-const hideDoneTasks = [
-  {id: 1, content: "kawa", done: false},
-  {id: 2, content: "herbata", done: true},
-];
+const hideDoneTasks = false;
 
 function App() {
   return (
@@ -17,9 +15,10 @@ function App() {
      <header className="header">
         <h1>Lista zadań</h1>
     </header>
-        <h2 className="list__field">Dodaj nowe zadanie</h2>
+        <h3 className="list__field">Dodaj nowe zadanie</h3>
         <Form />
-        <h3 className="list__field list__field--biggerGap">Lista zadań</h3>
+        <h4 className="list__field list__field--biggerGap">Lista zadań</h4>
+        <Buttons tasks={tasks}/>
         <Tasks tasks={tasks} hideDoneTasks={hideDoneTasks}/>
     </main>
   );

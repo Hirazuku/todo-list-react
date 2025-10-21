@@ -1,9 +1,15 @@
-import "./buttons.css";
+import "./style.css";
 
-const Tasks = (props) => (
+const Tasks = ({tasks, hideDoneTasks}) => (
 <ul className="list__plane"> 
-    {props.tasks.map(({id, content}) => (
-        <li key={id}>{content}
+    {tasks.map(task => (
+        <li className={`list__item list__item--row ${task.done && hideDoneTasks ? " tasks__item--hidden" : ""}`} key={task.id}>
+            <button 
+                className={`button_done_unchecked`}> {task.done ?  "✓" : ""}</button 
+              >
+              <span className={`${task.done ? " list__item--done" : ""}`}>
+               {task.content}</span>
+              <button className="button__remove">🗑</button>
         </li>
     ))}
         </ul>
