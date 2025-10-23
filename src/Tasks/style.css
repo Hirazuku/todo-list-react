@@ -34,39 +34,7 @@
     display: none;
 }
 
-.small__buttons {
-    color: hsl(180, 100%, 25%);
-    height: 50px;
-    font-size: 20px;
-    padding: 10px;
-    border: none;
-    background-color: white;
-}
 
-.small__buttons:hover {
-    color: hsl(180, 100%, 40%);
-    height: 50px;
-    font-size: 20px;
-    padding: 10px;
-    border: none;
-    transition: 0.3s;
-}
-
-.disabled__button {
-    color: grey;
-    height: 50px;
-    font-size: 20px;
-    padding: 10px;
-    border: none;
-}
-
-.disabled__button:hover {
-    color: grey;
-    height: 50px;
-    font-size: 20px;
-    padding: 10px;
-    border: none;
-}
 
 .list__plane {
     list-style-type: none;
