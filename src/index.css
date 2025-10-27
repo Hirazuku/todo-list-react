@@ -9,11 +9,12 @@ html {
 }
 
 .body {
-    margin: 0 auto;
+    margin: auto;
     max-width: 900px;
     color: #000000;
     background-color: rgb(239, 235, 235);
     font: 25px/2 'Oswald', sans-serif;
+    padding: 10px;
 }
 
 

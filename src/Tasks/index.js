@@ -1,7 +1,7 @@
 import "./style.css";
 
 const Tasks = ({ tasks, hideDoneTasks }) => (
-    <ul className="task__plane">
+    <>
         {tasks.map(task => (
             <li
                 className={`task__item task__item--row ${
@@ -25,7 +25,7 @@ const Tasks = ({ tasks, hideDoneTasks }) => (
                 <button className="button__remove">🗑</button>
             </li>
         ))}
-    </ul>
+    </>
 );
 
 export default Tasks;

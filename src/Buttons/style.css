@@ -1,6 +1,6 @@
 .buttons__new {
     display: grid;
-    grid-template-columns: 2fr repeat(2, 150px);
+    grid-template-columns: repeat(2, 150px);
     align-content: right;
     grid-gap: 20px;
     padding: 10px;
@@ -15,7 +15,7 @@
     background-color: white;
 }
 
-.small__buttons:hover {
+.buttons__small:hover {
     color: hsl(180, 100%, 40%);
     height: 50px;
     font-size: 20px;

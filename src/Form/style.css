@@ -10,6 +10,7 @@
     border-radius: 5px;
     width: 80%;
     max-width: 80%;
+    margin: 5px;
 }
 
 .button {
@@ -18,13 +19,14 @@
     border: none;
     padding: 10px;
     width: auto;
+    margin: 10px;
 }
 
 .button:hover {
     color: rgb(241, 232, 211);
     background-color: hsl(180, 100%, 40%);
     transition: 0.3s;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .link {
@@ -37,7 +39,7 @@
     text-decoration: none;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .container {
         margin: 10px;
     }
@@ -45,10 +47,12 @@
     .form__field {
         width: 100%;
         max-width: 100%;
+        margin: auto;
     }
 
     .button {
-        width: 40%;
+        width: 100%;
+        margin: 10px auto;
     }
 }
 

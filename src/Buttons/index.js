@@ -1,7 +1,7 @@
 import "./style.css";
 
 const Buttons = ({ tasks, hideDoneTasks }) => (
-  <div className="buttons__new">
+  <>
     {tasks.length > 0 && (
       <>
         <button className="buttons__small"> {
@@ -17,7 +17,7 @@ const Buttons = ({ tasks, hideDoneTasks }) => (
         </button>
       </>
     )}
-  </div>
+  </>
 
 );
 

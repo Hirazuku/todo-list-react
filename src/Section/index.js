@@ -2,10 +2,11 @@ import "./style.css";
 
 const Section = ({ title, body, extraHeaderContent }) => (
     <section className="section section--biggerGap">
-        <h2>
+        <div className="section__grid"><div className="section__title">
             {title}
-        </h2>
-        {extraHeaderContent}
+        </div>
+            {extraHeaderContent}
+        </div>
         {body}
     </section>
 )
