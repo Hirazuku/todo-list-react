@@ -1,7 +1,41 @@
-.new__buttons {
+.buttons__new {
     display: grid;
     grid-template-columns: 2fr repeat(2, 150px);
     align-content: right;
     grid-gap: 20px;
     padding: 10px;
+}
+
+.buttons__small {
+    color: hsl(180, 100%, 25%);
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    background-color: white;
+}
+
+.small__buttons:hover {
+    color: hsl(180, 100%, 40%);
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    transition: 0.3s;
+}
+
+.button__disabled {
+    color: grey;
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+}
+
+.button__disabled:hover {
+    color: grey;
+    height: 50px;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
 }

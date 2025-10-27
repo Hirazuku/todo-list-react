@@ -1,6 +1,10 @@
 # Task List
 
+Link for my website: https://hirazuku.github.io/todo-list-react/
+
 Description
+
+This app was built for writing down your own goals, whether they're long or short term. You can delete those, who are already done or just mark them and hide. It was built using React for more simple syntax and more user-friendly interface. You can use it freely, even for shopping list etc. Enjoy
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -36,4 +40,3 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-Link for my website: https://hirazuku.github.io/todo-list-react/

@@ -1,7 +1,7 @@
 import "./style.css";
 
 const Section = ({ title, body, extraHeaderContent }) => (
-    <section className="list__field list__field--biggerGap">
+    <section className="section section--biggerGap">
         <h2>
             {title}
         </h2>
