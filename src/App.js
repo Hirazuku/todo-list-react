@@ -6,11 +6,6 @@ import Header from "./Header";
 import Container from "./Container";
 import React, { useState } from 'react';
 
-const tasks = [
-  { id: 1, content: "kawa", done: true },
-  { id: 2, content: "sok", done: false },
-];
-
 
 
 function App() {
@@ -18,6 +13,14 @@ function App() {
   const [hideDone, setHideDone] = useState(false);
   const toggleHideDone = () => {
     setHideDone(hideDone => !hideDone);
+  };
+
+  const [tasks, setTasks] = useState([
+    { id: 1, content: "kawa", done: true },
+    { id: 2, content: "sok", done: false },
+  ]);
+  const removeTask = (id) => {
+    setTasks(tasks => tasks.filter(task => task.id !== id));
   };
 
   return (
@@ -41,7 +44,11 @@ function App() {
             toggleHideDone={toggleHideDone}
           />
         }
-        body={<Tasks tasks={tasks} hideDone={hideDone} />}
+        body={
+          <Tasks
+            tasks={tasks}
+            hideDone={hideDone}
+            removeTask={removeTask} />}
       />
 
 
