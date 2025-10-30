@@ -1,9 +1,7 @@
 import "./style.css";
 
-const onDelete = (name) => {
-    console.log(`Nazwa zadania do usunięcia: ${name}`);
-}
-const Tasks = ({ tasks, hideDone, removeTask }) => (
+
+const Tasks = ({ tasks, hideDone, removeTask, doneTask }) => (
     <>
         {tasks.map(task => (
             <li
@@ -15,6 +13,7 @@ const Tasks = ({ tasks, hideDone, removeTask }) => (
                 key={task.id}
             >
                 <button
+                onClick={() => doneTask(task.id)}
                     className={`button_done_unchecked`}> {
                         task.done
                             ? "✓" : ""
