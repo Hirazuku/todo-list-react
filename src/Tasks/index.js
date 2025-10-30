@@ -1,12 +1,15 @@
 import "./style.css";
 
-const Tasks = ({ tasks, hideDoneTasks }) => (
+const onDelete = (name) => {
+    console.log(`Nazwa zadania do usunięcia: ${name}`);
+}
+const Tasks = ({ tasks, hideDone }) => (
     <>
         {tasks.map(task => (
             <li
                 className={`task__item task__item--row ${
-                    task.done && hideDoneTasks
-                        ? " tasks__item--hidden"
+                    task.done && hideDone
+                        ? " task__item--hidden"
                         : ""}`
                 }
                 key={task.id}
@@ -22,7 +25,7 @@ const Tasks = ({ tasks, hideDoneTasks }) => (
                 }
                 >
                     {task.content}</span>
-                <button className="button__remove">🗑</button>
+                <button  className="button__remove" onClick = {() => onDelete(task.content)}>🗑</button>
             </li>
         ))}
     </>

@@ -39,3 +39,7 @@
     padding: 10px;
     border: none;
 }
+
+.task__item--hidden {
+    display: none;
+}

@@ -28,10 +28,6 @@
     transition: 0.3s;
 }
 
-.tasks__item--hidden {
-    display: none;
-}
-
 .task__plane {
     list-style-type: none;
 }
@@ -54,3 +50,4 @@
 .task__item--done {
     text-decoration: line-through;
 }
+
