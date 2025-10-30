@@ -15,23 +15,30 @@ function App() {
     setHideDone(hideDone => !hideDone);
   };
 
+
   const [tasks, setTasks] = useState([
     { id: 1, content: "kawa", done: true },
     { id: 2, content: "sok", done: false },
   ]);
+
   const removeTask = (id) => {
     setTasks(tasks => tasks.filter(task => task.id !== id));
   };
 
   const doneTask = (id) => {
     setTasks(tasks => tasks.map(task => {
-      if(task.id === id) {
-        return {...task, done: !task.done}
+      if (task.id === id) {
+        return { ...task, done: !task.done }
       }
 
       return task;
     }));
   }
+
+  const allTasksDone = () => {
+    setTasks(tasks => tasks.map(task => (
+      { ...task, done: true })))
+  };
 
   return (
     <Container>
@@ -52,14 +59,17 @@ function App() {
             tasks={tasks}
             hideDone={hideDone}
             toggleHideDone={toggleHideDone}
+            allTasksDone={allTasksDone}
           />
         }
         body={
           <Tasks
             tasks={tasks}
             hideDone={hideDone}
-            removeTask={removeTask} 
-            doneTask={doneTask}/>}
+            removeTask={removeTask}
+            doneTask={doneTask}
+          />
+        }
       />
 
 
