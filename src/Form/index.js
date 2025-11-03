@@ -1,8 +1,6 @@
 import "./style.css";
 import React, { useState } from 'react';
 
-
-
 const Form = ({ addNewTask }) => {
     const [newTaskContent, setNewTaskContent] = useState("");
 

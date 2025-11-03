@@ -6,7 +6,10 @@ import Header from "./Header";
 import Container from "./Container";
 import React, { useState } from 'react';
 
-
+const defaultTasks = [
+  { id: 1, content: "kawa", done: true },
+  { id: 2, content: "sok", done: false },
+];
 
 function App() {
 
@@ -15,11 +18,7 @@ function App() {
     setHideDone(hideDone => !hideDone);
   };
 
-
-  const [tasks, setTasks] = useState([
-    { id: 1, content: "kawa", done: true },
-    { id: 2, content: "sok", done: false },
-  ]);
+  const [tasks, setTasks] = useState(defaultTasks);
 
   const removeTask = (id) => {
     setTasks(tasks => tasks.filter(task => task.id !== id));
@@ -52,6 +51,7 @@ function App() {
   };
 
   return (
+
     <Container>
 
       <Header
@@ -86,7 +86,6 @@ function App() {
           />
         }
       />
-
 
     </Container>
   );
