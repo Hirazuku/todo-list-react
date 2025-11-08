@@ -11,15 +11,19 @@ const defaultTasks = [
   { content: "sok", done: false, id: 2 },
 ];
 
+const getInitialTasks = () => {
+    const tasksFromLocalStorage = localStorage.getItem("tasks");
+
+    return tasksFromLocalStorage
+    ? JSON.parse(tasksFromLocalStorage)
+    : [];
+  };
+
 function App() {
 
   const [hideDone, setHideDone] = useState(false);
 
-  const tasksFromLocalStorage = localStorage.getItem("tasks");
-
-  const [tasks, setTasks] = useState(
-    tasksFromLocalStorage ? JSON.parse(tasksFromLocalStorage) : []
-  );
+  const [tasks, setTasks] = useState(getInitialTasks);
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
