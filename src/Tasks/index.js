@@ -7,7 +7,8 @@ const Tasks = ({ tasks, hideDone, removeTask, doneTask }) => (
                 {task.content !== "" && (
                     <>
                         <li
-                            className={`task__item task__item--row ${task.done && hideDone
+                            className={`task__item task__item--row ${
+                                task.done && hideDone
                                 ? " task__item--hidden"
                                 : ""}`
                             }
@@ -25,7 +26,8 @@ const Tasks = ({ tasks, hideDone, removeTask, doneTask }) => (
                             }
                             >
                                 {task.content}</span>
-                            <button onClick={() => removeTask(task.id)} className="button__remove" >🗑</button>
+                            <button onClick={() => removeTask(task.id)}
+                                className="button__remove" >🗑</button>
                         </li>
 
                     </>)}
