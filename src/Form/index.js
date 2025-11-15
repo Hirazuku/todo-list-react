@@ -6,14 +6,11 @@ const Form = ({ addNewTask }) => {
 
     const inputRef = useRef(null);
 
-    const focusInput = () => {
-        inputRef.current.focus();
-    }
-
     const onFormSubmit = (event) => {
         event.preventDefault();
         addNewTask(newTaskContent.trim());
         setNewTaskContent("");
+        inputRef.current.focus();
     }
 
     return (
@@ -23,7 +20,7 @@ const Form = ({ addNewTask }) => {
                 value={newTaskContent}
                 onChange={({ target }) => setNewTaskContent(target.value)}
                 placeholder="Co jest do zrobienia?" />
-            <StyledButton onClick={focusInput}>Dodaj do listy</StyledButton>
+            <StyledButton>Dodaj do listy</StyledButton>
         </form>
     )
 }
