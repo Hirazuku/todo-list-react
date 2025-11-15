@@ -9,7 +9,7 @@ export const FormField = styled.input`
     max-width: 80%;
     margin: 5px;
 
-    @media (max-width: 767px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
         width: 100%;
         max-width: 100%;
         margin: auto;
@@ -30,7 +30,7 @@ export const StyledButton = styled.button`
         transform: scale(1.1);
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
         width: 100%;
         margin: 10px auto;
         padding: 10px;

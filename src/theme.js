@@ -14,6 +14,6 @@ export const theme = {
         brightTeal: "#26dfdfff",
     },
     breakpoints: {
-        mobile: 767
+        mobile: 767,
     },
 };

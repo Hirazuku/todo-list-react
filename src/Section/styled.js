@@ -15,7 +15,7 @@ export const SectionGrid = styled.div`
     grid-gap: 20px;
     padding: 10px;
 
-    @media (max-width: 767px){
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px){
         padding: 5px;
         grid-template-columns: 3fr;
     }
