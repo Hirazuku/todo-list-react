@@ -1,4 +1,4 @@
-import "./style.css";
+import { List, Content, Button } from "./styled";
 
 const Tasks = ({ tasks, hideDone, removeTask, doneTask }) => (
     <>
@@ -6,32 +6,25 @@ const Tasks = ({ tasks, hideDone, removeTask, doneTask }) => (
             <>
                 {task.content !== "" && (
                     <>
-                        <li
-                            className={`task__item task__item--row ${
-                                task.done && hideDone
-                                ? " task__item--hidden"
-                                : ""}`
-                            }
+                        <List
                             key={task.id}
+                            hidden={task.done && hideDone}
                         >
-                            <button
+                            <Button
+                                doneTask
                                 onClick={() => doneTask(task.id)}
-                                className={`button_done_unchecked`}> {
-                                    task.done
-                                        ? "✓" : ""
-                                }
-                            </button>
-                            <span className={`${task.done
-                                ? " task__item--done" : ""}`
-                            }
                             >
-                                {task.content}</span>
-                            <button onClick={() => removeTask(task.id)}
-                                className="button__remove" >🗑</button>
-                        </li>
-
+                                {task.done ? "✓" : ""}
+                            </Button>
+                            <Content done={task.done}>
+                                {task.content}
+                            </Content>
+                            <Button
+                                removeTask
+                                onClick={() => removeTask(task.id)}
+                            >🗑</Button>
+                        </List>
                     </>)}
-
             </>))}
     </>
 );

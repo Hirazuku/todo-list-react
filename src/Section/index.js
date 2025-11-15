@@ -1,14 +1,15 @@
-import "./style.css";
+import { StyledSection, SectionGrid, SectionTitle } from "./styled";
 
 const Section = ({ title, body, extraHeaderContent }) => (
-    <section className="section section--biggerGap">
-        <div className="section__grid"><div className="section__title">
-            {title}
-        </div>
+    <StyledSection>
+        <SectionGrid>
+            <SectionTitle>
+                {title}
+            </SectionTitle>
             {extraHeaderContent}
-        </div>
+        </SectionGrid>
         {body}
-    </section>
+    </StyledSection>
 )
 
 export default Section;

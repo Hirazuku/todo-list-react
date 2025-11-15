@@ -37,7 +37,7 @@ function App() {
 
       return task;
     }));
-  }
+  };
 
   const allTasksDone = () => {
     setTasks(tasks => tasks.map(task => (

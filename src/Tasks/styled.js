@@ -1,0 +1,53 @@
+import styled, { css } from "styled-components";
+
+export const List = styled.li`
+    margin: 5px 0;
+    padding: 5px;
+    list-style-type: none;
+    min-height: 80px;
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    grid-gap: 11px;
+    align-content: center;
+    font-size: 20px;
+
+    ${({ hidden }) => hidden && css`
+        display: none;
+    `}
+`
+
+export const Content = styled.span`
+    ${({ done }) => done && css`
+        text-decoration: line-through;
+    `}
+`
+
+export const Button = styled.button`
+    background-color: rgb(39, 175, 55);
+    border: none;
+    transition: transform 1s ease-in;
+    color: white;
+
+    &:hover {
+        background-color: rgb(83, 207, 97);
+        transition: 0.3s;
+    }
+
+    ${({ doneTask }) => doneTask && css`
+        background-size: contain;
+        width: 50px;
+    `}
+
+    ${({ removeTask }) => removeTask && css`
+        background-color: rgb(196, 28, 28);
+        width: 50px;
+        height: 50px;
+        border: none;
+        color: white;
+
+        &:hover{
+            background-color: rgb(249, 59, 59);
+            transition: 0.3s;
+        }
+    `}
+`
