@@ -23,13 +23,13 @@ export const Content = styled.span`
 `
 
 export const Button = styled.button`
-    background-color: rgb(39, 175, 55);
+    background-color: ${({ theme }) => theme.colors.forestGreen};
     border: none;
     transition: transform 1s ease-in;
     color: white;
 
     &:hover {
-        background-color: rgb(83, 207, 97);
+        background-color: ${({ theme }) => theme.colors.emerald};
         transition: 0.3s;
     }
 
@@ -39,14 +39,14 @@ export const Button = styled.button`
     `}
 
     ${({ removeTask }) => removeTask && css`
-        background-color: rgb(196, 28, 28);
+        background-color: ${({ theme }) => theme.colors.thunderbird};
         width: 50px;
         height: 50px;
         border: none;
         color: white;
 
         &:hover{
-            background-color: rgb(249, 59, 59);
+            background-color: ${({ theme }) => theme.colors.redOrange};
             transition: 0.3s;
         }
     `}

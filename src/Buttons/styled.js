@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const SmallButton = styled.button`
-    color: hsl(180, 100%, 25%);
+    color: ${({ theme }) => theme.colors.teal};
     height: 50px;
     font-size: 20px;
     padding: 10px;
@@ -9,7 +9,7 @@ export const SmallButton = styled.button`
     background-color: white;
 
     &:hover{
-        color: hsl(180, 100%, 40%);
+        color: ${({ theme }) => theme.colors.brightTeal};
         height: 50px;
         font-size: 20px;
         padding: 10px;
@@ -18,14 +18,14 @@ export const SmallButton = styled.button`
     }
 
     ${({ done }) => done && css`
-        color: grey;
+        color: ${({ theme }) => theme.colors.brightGrey};
         height: 50px;
         font-size: 20px;
         padding: 10px;
         border: none;
 
         &:hover {
-            color: grey;
+            color: ${({ theme }) => theme.colors.brightGrey};
         }
     `}
 `

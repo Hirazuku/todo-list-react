@@ -1,10 +1,10 @@
 import styled, { css } from "styled-components";
 
 export const StyledSection = styled.section`
-    background-color: rgb(255, 255, 255);
+    background-color: ${({ theme }) => theme.colors.white};
     padding: 10px;
     margin: 15px 0;
-    box-shadow: 15px 15px 15px 15px rgba(188, 182, 170, 0.26);
+    box-shadow: 15px 15px 15px 15px ${({ theme }) => theme.colors.twine};;
     font-size: 25px;
 `
 
