@@ -9,8 +9,6 @@ import { useTasks } from "./useTasks";
 
 function App() {
 
-  
-
   const {
     tasks,
     hideDone,
