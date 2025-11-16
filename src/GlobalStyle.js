@@ -14,8 +14,8 @@ html {
 .body {
     margin: auto;
     max-width: 900px;
-    color: #000000;
-    background-color: rgb(239, 235, 235);
+    color: ${({ theme }) => theme.colors.black};
+    background-color: ${({ theme }) => theme.colors.white};
     font: 25px/2 'Oswald', sans-serif;
     padding: 10px;
 }
