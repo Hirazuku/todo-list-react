@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export const useTasks = () => {
 
@@ -49,5 +49,12 @@ export const useTasks = () => {
         setHideDone(hideDone => !hideDone);
     };
 
-    return { tasks, hideDone, doneTask, removeTask, allTasksDone, addNewTask, toggleHideDone };
+    return { 
+        tasks, 
+        hideDone, 
+        doneTask, 
+        removeTask, 
+        allTasksDone, 
+        addNewTask, 
+        toggleHideDone, };
 };
