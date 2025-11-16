@@ -16,7 +16,7 @@ export const FormField = styled.input`
     }
 `
 export const StyledButton = styled.button`
-    color: ${({ theme }) => theme.colors.ebb};
+    color: ${({ theme }) => theme.colors.white};
     background-color:${({ theme }) => theme.colors.teal};
     border: none;
     padding: 10px;
