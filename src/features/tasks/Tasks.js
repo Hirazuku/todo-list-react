@@ -14,12 +14,12 @@ function Tasks() {
 
   const {
     //tasks,
-    hideDone,
+    //hideDone,
     doneTask,
     removeTask,
     allTasksDone,
     addNewTask,
-    toggleHideDone,
+    //toggleHideDone
   } = useTasks();
 
   return (
@@ -34,7 +34,6 @@ function Tasks() {
         title="Dodaj nowe zadanie"
         body={
           <Form
-            addNewTask={addNewTask}
           />
         }
       />
@@ -43,16 +42,12 @@ function Tasks() {
         title="Lista zadań"
         extraHeaderContent={
           <Buttons
-            tasks={tasks}
-            hideDone={hideDone}
-            toggleHideDone={toggleHideDone}
             allTasksDone={allTasksDone}
           />
         }
         body={
           <TaskList
             tasks={tasks}
-            hideDone={hideDone}
             removeTask={removeTask}
             doneTask={doneTask}
           />

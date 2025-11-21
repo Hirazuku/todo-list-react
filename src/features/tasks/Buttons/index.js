@@ -1,11 +1,18 @@
 import { SmallButton } from "./styled";
+import { useSelector, useDispatch } from "react-redux";
+import { selectTasks, toggleHideDone } from "../tasksSlice.js";
 
-const Buttons = ({ tasks, hideDone, toggleHideDone, allTasksDone }) => (
+const Buttons = ({ allTasksDone }) => {
+
+  const {tasks, hideDone} = useSelector(selectTasks);
+  const dispatch = useDispatch();
+
+  return (
   <>
     {tasks.length > 0 && (
       <>
         <SmallButton
-          onClick={toggleHideDone}>
+          onClick={() => dispatch(toggleHideDone())}>
           {hideDone ? "Pokaż" : "Ukryj"}  ukończone
         </SmallButton>
         <SmallButton
@@ -16,6 +23,7 @@ const Buttons = ({ tasks, hideDone, toggleHideDone, allTasksDone }) => (
       </>
     )}
   </>
-);
+)  
+};
 
 export default Buttons;
