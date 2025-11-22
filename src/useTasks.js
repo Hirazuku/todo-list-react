@@ -17,12 +17,23 @@ export const useTasks = () => {
         setTasks(tasks => tasks.filter(task => task.id !== id));
     };
 
+    const doneTask = (id) => {
+        setTasks(tasks => tasks.map(task => {
+            if (task.id === id) {
+                return { ...task, done: !task.done }
+            }
+
+            return task;
+        }));
+    };
+
     const allTasksDone = () => {
         setTasks(tasks => tasks.map(task => (
             { ...task, done: true })))
     };
 
-    return {    
+    return {   
+        doneTask, 
         removeTask, 
         allTasksDone,  };
 };
