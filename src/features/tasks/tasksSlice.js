@@ -13,11 +13,15 @@ const tasksSlice = createSlice({ // createSlice zwróci obiekt w tasksSlice (imm
         toggleHideDone: (state) => {
             state.hideDone = !state.hideDone;
         },
+        doneTask: ({tasks}, action) => {
+            const index = tasks.findIndex(({id}) => id === action.payload);
+            tasks[index].done = !tasks[index].done;
+        },
     },
 });
 // createSlice z
 
-export const { addNewTask, toggleHideDone } = tasksSlice.actions; // addNewTask to jest action creator, stworzony przez createSlice
+export const { addNewTask, toggleHideDone, doneTask } = tasksSlice.actions; // addNewTask to jest action creator, stworzony przez createSlice
 export const selectTasks = state => state.tasks;
 export default tasksSlice.reducer;
 

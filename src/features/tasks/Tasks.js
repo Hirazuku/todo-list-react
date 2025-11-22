@@ -6,19 +6,16 @@ import Section from "../../common/Section";
 import Header from "../../common/Header";
 import Container from "../../common/Container";
 import { useTasks } from "../../useTasks";
-import { selectTasks } from "./tasksSlice";
 
 function Tasks() {
-
-  const { tasks } = useSelector(selectTasks);
 
   const {
     //tasks,
     //hideDone,
-    doneTask,
+    //doneTask
     removeTask,
     allTasksDone,
-    addNewTask,
+    //addNewTask
     //toggleHideDone
   } = useTasks();
 
@@ -33,8 +30,7 @@ function Tasks() {
       <Section
         title="Dodaj nowe zadanie"
         body={
-          <Form
-          />
+          <Form />
         }
       />
 
@@ -47,9 +43,7 @@ function Tasks() {
         }
         body={
           <TaskList
-            tasks={tasks}
             removeTask={removeTask}
-            doneTask={doneTask}
           />
         }
       />
