@@ -1,14 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const tasksSlice = createSlice({ // createSlice zwróci obiekt w tasksSlice (immutability korzysta z immer, biblioteki zaimportowanej z redux toolkit)
-    name: 'tasks', // nazwa
-    initialState: { // stan początkowy
+const tasksSlice = createSlice({ 
+    name: 'tasks',
+    initialState: { 
         tasks: [],
         hideDone: false,
     },
     reducers: {
-        addNewTask: ({ tasks }, { payload: task }) => { // tak z poprzedniego stanu powstaje nowy
-            tasks.push(task); // payload to nowe zadanie do listy
+        addNewTask: ({ tasks }, { payload: task }) => { 
+            tasks.push(task); 
         },
         toggleHideDone: (state) => {
             state.hideDone = !state.hideDone;
@@ -43,13 +43,3 @@ export const selectHideDone = state => selectTasksState(state).hideDone;
 export const selectAreTasksEmpty = state => selectTasks(state).length === 0;
 export const selectIsEveryTaskDone = state => selectTasks(state).every(({ done }) => done)
 export default tasksSlice.reducer;
-
-tasksSlice.reducer({ tasks: [] }, addNewTask({
-    content: "Test",
-    done: true,
-}))
-
-console.log(tasksSlice.reducer({ tasks: [] }, addNewTask({
-    content: "Test",
-    done: true,
-})));

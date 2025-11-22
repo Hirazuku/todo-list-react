@@ -27,7 +27,7 @@ export const StyledButton = styled.button`
         color: ${({ theme }) => theme.colors.white};
         background-color: ${({ theme }) => theme.colors.brightTeal};
         transition: 0.3s;
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {

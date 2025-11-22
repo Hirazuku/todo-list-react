@@ -12,7 +12,7 @@ const TaskList = () => {
         <>
             {tasks.map(task => (
                 <>
-                    {task.content !== "" && (
+                    {task.content.trimmed !== "" && (
                         <>
                             <List
                                 key={task.id}
