@@ -4,19 +4,8 @@ import Buttons from "./Buttons";
 import Section from "../../common/Section";
 import Header from "../../common/Header";
 import Container from "../../common/Container";
-import { useTasks } from "../../useTasks";
 
 function Tasks() {
-
-  const {
-    //tasks
-    //hideDone
-    //doneTask
-    //removeTask
-    //allTasksDone
-    //addNewTask
-    //toggleHideDone
-  } = useTasks();
 
   return (
 
