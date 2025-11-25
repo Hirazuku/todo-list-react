@@ -1,6 +1,6 @@
 import { takeEvery, call, put } from "redux-saga/effects";
-import { fetchExampleTasks, setTasks } from "./tasksSlice";
-import { getExampleTasks } from "./getExampleTasks";
+import { fetchExampleTasks, setTasks } from "./tasksSlice.js";
+import { getExampleTasks } from "./getExampleTasks.js";
 
 function* fetchExampleTasksHandler(){
     try {
