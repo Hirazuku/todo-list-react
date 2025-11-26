@@ -4,7 +4,6 @@ export const SmallButton = styled.button`
     color: ${({ theme }) => theme.colors.teal};
     height: 50px;
     font-size: 20px;
-    padding: 10px;
     border: none;
     background-color: white;
 
@@ -12,7 +11,6 @@ export const SmallButton = styled.button`
         color: ${({ theme }) => theme.colors.brightTeal};
         height: 50px;
         font-size: 20px;
-        padding: 10px;
         border: none;
         transition: 0.3s;
     }
