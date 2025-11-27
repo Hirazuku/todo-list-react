@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const List = styled.li`
-    margin: 5px 0;
+    margin: 0px 0;
     padding: 5px;
     list-style-type: none;
     min-height: 80px;

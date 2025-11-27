@@ -2,21 +2,21 @@ import { HashRouter, NavLink, Routes, Route } from "react-router-dom";
 import TasksPage from "./features/tasks/TasksPage/index.js";
 import TaskPage from "./features/tasks/TaskPage/index.js";
 import AuthorPage from "./features/author/AuthorPage";
-import {StyledNavLink} from "./styled.js";
+import {StyledNavLink, List, ListItem} from "./styled.js";
 
 export const App = () =>
 (
     <HashRouter>
         <nav>
-            <ul>
-                <li>
+            <List>
+                <ListItem>
                     <StyledNavLink to="/zadania">Zadania</StyledNavLink>
 
-                </li>
-                <li>
+                </ListItem>
+                <ListItem>
                     <StyledNavLink to="/autor"> O autorze</StyledNavLink>
-                </li>
-            </ul>
+                </ListItem>
+            </List>
             <Routes>
                 <Route path="/zadania/:id" element={<TaskPage />} />
                 <Route path="/zadania" element={<TasksPage />} />

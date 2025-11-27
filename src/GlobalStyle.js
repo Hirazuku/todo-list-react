@@ -12,11 +12,10 @@ html {
 }
 
 .body {
-    margin: auto;
-    max-width: 900px;
+    margin: auto; 
     color: ${({ theme }) => theme.colors.black};
     background-color: ${({ theme }) => theme.colors.white};
     font: 25px/2 'Oswald', sans-serif;
-    padding: 10px;
+    padding: 10px 0px;
 }
 `

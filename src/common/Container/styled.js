@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const StyledContainer = styled.main`
-    margin: 10px;
+    margin: 10px auto;
     max-width: 900px;
     color: ${({ theme }) => theme.colors.black};
     background-color: ${({ theme }) => theme.colors.white};
