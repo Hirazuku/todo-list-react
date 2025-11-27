@@ -2,6 +2,7 @@ import { HashRouter, NavLink, Routes, Route } from "react-router-dom";
 import TasksPage from "./features/tasks/TasksPage/index.js";
 import TaskPage from "./features/tasks/TaskPage/index.js";
 import AuthorPage from "./features/author/AuthorPage";
+import {StyledNavLink} from "./styled.js";
 
 export const App = () =>
 (
@@ -9,11 +10,11 @@ export const App = () =>
         <nav>
             <ul>
                 <li>
-                    <NavLink activeClassName="active" to="/zadania">Zadania</NavLink>
+                    <StyledNavLink to="/zadania">Zadania</StyledNavLink>
 
                 </li>
                 <li>
-                    <NavLink activeClassName="active" to="/autor"> O autorze</NavLink>
+                    <StyledNavLink to="/autor"> O autorze</StyledNavLink>
                 </li>
             </ul>
             <Routes>
