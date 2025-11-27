@@ -11,7 +11,6 @@ export const App = () =>
             <List>
                 <ListItem>
                     <StyledNavLink to="/zadania">Zadania</StyledNavLink>
-
                 </ListItem>
                 <ListItem>
                     <StyledNavLink to="/autor"> O autorze</StyledNavLink>

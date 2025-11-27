@@ -1,8 +1,9 @@
 import styled, { css } from "styled-components";
+import { NavLink } from "react-router-dom";
 
 export const List = styled.li`
     margin: 0px 0;
-    padding: 5px;
+    padding: 0px;
     list-style-type: none;
     min-height: 80px;
     display: grid;
@@ -51,3 +52,19 @@ export const Button = styled.button`
         }
     `}
 `
+
+const activeClassName = "active";
+
+export const StyledNavLink = styled(NavLink).attrs(() => ({
+    activeClassName,
+}))`
+    color: ${({ theme }) => theme.colors.teal};
+    text-decoration: none;
+
+&:hover{
+        color: ${({ theme }) => theme.colors.brightTeal};
+        height: 50px;
+        font-size: 20px;
+        transition: 0.3s;
+    }
+`;
