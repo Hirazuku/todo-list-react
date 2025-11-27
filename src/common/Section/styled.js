@@ -10,8 +10,8 @@ export const StyledSection = styled.section`
 
 export const SectionGrid = styled.div`
     display: grid;
-    grid-template-columns: 2fr repeat(3, 150px);
-    align-content: right;
+    grid-template-columns: 1fr repeat(2, 200px);
+    align-items: end;
     grid-gap: 20px;
     padding: 10px;
 

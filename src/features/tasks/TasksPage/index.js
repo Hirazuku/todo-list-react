@@ -6,6 +6,7 @@ import Header from "../../../common/Header";
 import Container from "../../../common/Container";
 import Search from "./Search";
 import Input from "../Input";
+import { ExampleTasksButton } from "./ExampleTasksButton";
 
 function TasksPage() {
 
@@ -18,6 +19,7 @@ function TasksPage() {
 
       <Section
         title="Dodaj nowe zadanie"
+        extraHeaderContent={<ExampleTasksButton />}
         body={
           <Form />
         }
