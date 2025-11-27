@@ -62,7 +62,7 @@ export const StyledNavLink = styled(NavLink).attrs(() => ({
     text-decoration: none;
 
 &:hover{
-        color: ${({ theme }) => theme.colors.brightTeal};
+        color: ${({ theme }) => theme.colors.antiqueBronze};
         height: 50px;
         font-size: 20px;
         transition: 0.3s;
