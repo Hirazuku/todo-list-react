@@ -1,4 +1,4 @@
-import { HashRouter, Link, Routes, Route } from "react-router-dom";
+import { HashRouter, NavLink, Routes, Route } from "react-router-dom";
 import Tasks from "./features/tasks/Tasks.js";
 import Author from "./features/author/Author";
 
@@ -8,17 +8,17 @@ export const App = () =>
         <nav>
             <ul>
                 <li>
-                    <Link to="/zadania">Zadania</Link>
+                    <NavLink activeClassName="active" to="/zadania">Zadania</NavLink>
 
                 </li>
                 <li>
-                    <Link to="/autor"> O autorze</Link>
+                    <NavLink activeClassName="active" to="/autor"> O autorze</NavLink>
                 </li>
             </ul>
             <Routes>
                 <Route path="/zadania" element={<Tasks />} />
                 <Route path="/autor" element={<Author />} />
-                <Route path="/" element={<Author />} />
+                <Route path="/" element={<Tasks />} />
             </Routes>
         </nav>
     </HashRouter>
