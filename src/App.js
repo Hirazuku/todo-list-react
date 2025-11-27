@@ -1,6 +1,7 @@
 import { HashRouter, NavLink, Routes, Route } from "react-router-dom";
-import Tasks from "./features/tasks/Tasks.js";
-import Author from "./features/author/Author";
+import TasksPage from "./features/tasks/TasksPage/index.js";
+import TaskPage from "./features/tasks/TaskPage/index.js";
+import AuthorPage from "./features/author/AuthorPage";
 
 export const App = () =>
 (
@@ -16,9 +17,10 @@ export const App = () =>
                 </li>
             </ul>
             <Routes>
-                <Route path="/zadania" element={<Tasks />} />
-                <Route path="/autor" element={<Author />} />
-                <Route path="/" element={<Tasks />} />
+                <Route path="/zadania/:id" element={<TaskPage />} />
+                <Route path="/zadania" element={<TasksPage />} />
+                <Route path="/autor" element={<AuthorPage />} />
+                <Route path="/" element={<TasksPage />} />
             </Routes>
         </nav>
     </HashRouter>
