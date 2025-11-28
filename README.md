@@ -10,7 +10,7 @@ This app was built for writing down your own goals, whether they're long or shor
 
 ## Used Technologies:
 - Html
-- JSX
+- JSX 
 - React ⚛
 - React router
 - Hooks
@@ -18,7 +18,8 @@ This app was built for writing down your own goals, whether they're long or shor
 - Api
 - Axios
 - Build
-- Redux <img src="https://img.icons8.com/?size=100&id=DgDldTbM9fXB&format=png&color=f58220">
+- Redux 
+<img src="https://img.icons8.com/?size=100&id=DgDldTbM9fXB&format=png&color=f58220">
 - Redux Saga
 - Redux Toolkit
 - Redux LocalStorage
