@@ -2,9 +2,26 @@
 
 Link for my website: https://hirazuku.github.io/todo-list-react/
 
+![animation](gif/Animation.gif)
+
 Description
 
 This app was built for writing down your own goals, whether they're long or short term. You can delete those, who are already done or just mark them and hide. It was built using React for more simple syntax and more user-friendly interface. You can use it freely, even for shopping list etc. Enjoy
+
+## Used Technologies:
+- React
+- React router
+- Hooks
+- Styled Components
+- Api
+- Axios
+- Build
+- Redux
+- Redux Saga
+- Redux Toolkit
+- Redux LocalStorage
+  
+  And more
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
