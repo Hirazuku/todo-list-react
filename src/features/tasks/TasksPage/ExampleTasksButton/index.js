@@ -1,27 +1,19 @@
-import { fetchExampleTasks } from "../../tasksSlice";
-import { useDispatch } from "react-redux";
-import { useExampleTasks } from "./useExampleTasks";
+import { fetchExampleTasks, selectLoading } from "../../tasksSlice";
+import { useDispatch, useSelector } from "react-redux";
 import { SmallButton, ButtonLoading } from "./styled";
 
 export const ExampleTasksButton = () => {
 
     const dispatch = useDispatch();
-
-    const exampleTasks = useExampleTasks();
+    const loading = useSelector(selectLoading);
 
     return (
-        <>
+        <SmallButton disabled={loading} onClick={() => dispatch(fetchExampleTasks())}>
             {
-                exampleTasks.state === "loading"
-                    ? (
-                        <ButtonLoading>Ładuję...</ButtonLoading>
-                    )
-                    : (
-                        <SmallButton onClick={() => dispatch(fetchExampleTasks())}>
-                            Pobierz przykładowe zadania
-                        </SmallButton >
-                    )
+                loading
+                ? <ButtonLoading>Ładowanie...</ButtonLoading>
+                : "Pobierz przykładowe zadania"
             }
-        </>
-    )
-}
+        </SmallButton>
+    );
+};
