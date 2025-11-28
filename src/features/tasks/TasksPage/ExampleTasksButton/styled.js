@@ -27,3 +27,11 @@ export const SmallButton = styled.button`
         }
     `}
 `
+
+export const ButtonLoading = styled.button`
+    color: ${({ theme }) => theme.colors.brightGrey};
+    height: 50px;
+    font-size: 20px;
+    border: none;
+    background-color: white;
+    `

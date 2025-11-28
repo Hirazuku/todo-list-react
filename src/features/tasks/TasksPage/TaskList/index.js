@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { List, Content, Button, StyledNavLink } from "./styled";
 import { doneTask, removeTask, selectHideDone, selectTasksByQuery } from "../../tasksSlice";
