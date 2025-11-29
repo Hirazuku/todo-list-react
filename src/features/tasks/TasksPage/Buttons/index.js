@@ -1,4 +1,4 @@
-import { SmallButton } from "./styled";
+import { SmallButton, Wrapper } from "./styled";
 import { useSelector, useDispatch } from "react-redux";
 import {
   toggleHideDone,
@@ -17,7 +17,7 @@ const Buttons = () => {
 
   return (
     <>
-      
+      <Wrapper>
       {!areTasksEmpty && (
         <>
           <SmallButton
@@ -31,7 +31,9 @@ const Buttons = () => {
           </SmallButton>
         </>
       )}
+      </Wrapper>
     </>
+    
   )
 };
 

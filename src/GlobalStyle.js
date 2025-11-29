@@ -16,6 +16,6 @@ html {
     color: ${({ theme }) => theme.colors.black};
     background-color: ${({ theme }) => theme.colors.white};
     font: 25px/2 'Oswald', sans-serif;
-    padding: 10px 0px;
+    padding: 0px 0px;
 }
 `

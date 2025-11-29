@@ -8,21 +8,22 @@ export const StyledNavLink = styled(NavLink).attrs(() => ({
 }))`
     color: ${({ theme }) => theme.colors.white};
     text-decoration: none;
+    font-size: 25px;
 
 &:hover{
         color: ${({ theme }) => theme.colors.twine};
         height: 50px;
-        font-size: 20px;
+        font-size: 25px;
         transition: 0.3s;
     }
 
 &.${activeClassName} {
-    font-weight: bold;
+    font-weight: 900;
 }
 `;
 
 export const List = styled.ul`
-    margin: 15px 0;
+    margin: 0px 0;
     padding: 5px;
     background-color: ${({ theme }) => theme.colors.teal};
     list-style-type: none;

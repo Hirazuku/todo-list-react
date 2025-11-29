@@ -10,14 +10,15 @@ export const StyledSection = styled.section`
 
 export const SectionGrid = styled.div`
     display: grid;
-    grid-template-columns: 1fr repeat(2, 200px);
-    align-items: end;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    align-items: center;
     grid-gap: 20px;
     padding: 10px;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px){
         padding: 5px;
-        grid-template-columns: 3fr;
+        grid-template-columns: 1fr;
     }
 `
 export const SectionTitle = styled.div`
