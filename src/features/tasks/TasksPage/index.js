@@ -7,8 +7,13 @@ import Container from "../../../common/Container";
 import Search from "./Search";
 import Input from "../Input";
 import { ExampleTasksButton } from "./ExampleTasksButton";
+import { fetchExampleTasks } from "../tasksSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 function TasksPage() {
+
+  const dispatch = useDispatch();
+console.log(dispatch(fetchExampleTasks()))
 
   return (
 

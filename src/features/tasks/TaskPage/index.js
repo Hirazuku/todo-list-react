@@ -8,6 +8,7 @@ import Container from "../../../common/Container";
 function TaskPage() {
     const { id } = useParams();
     const task = useSelector(state => getTaskById(state, id))
+
     return (
         <Container>
             <Header title="Lista zadań" />
