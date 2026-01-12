@@ -8,6 +8,7 @@ export const List = styled.li`
     min-height: 80px;
     display: grid;
     grid-template-columns: 50px 1fr 50px;
+    grid-template-rows: auto;
     grid-gap: 11px;
     align-content: center;
     font-size: 20px;
@@ -35,7 +36,7 @@ export const Button = styled.button`
     }
 
     ${({ doneTask }) => doneTask && css`
-        background-size: contain;
+        height: 50px;
         width: 50px;
     `}
 

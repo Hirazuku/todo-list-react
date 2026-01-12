@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const FormField = styled.input`
     color: ${({ theme }) => theme.colors.black};

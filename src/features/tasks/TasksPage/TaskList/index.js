@@ -1,11 +1,11 @@
 import { useSelector, useDispatch } from "react-redux";
 import { List, Content, Button, StyledNavLink } from "./styled";
 import { doneTask, removeTask, selectHideDone, selectTasksByQuery } from "../../tasksSlice";
-import searchQueryParamName from "../../TaskPage/searchQueryParamName";
+import { phrase } from "../../TaskPage/searchQueryParamName";
 import { useQueryParameter } from "../queryParameters";
 
 const TaskList = () => {
-    const query = useQueryParameter(searchQueryParamName);
+    const query = useQueryParameter(phrase);
     const tasks = useSelector(state => selectTasksByQuery(state, query));
     const hideDone = useSelector(selectHideDone);
 
@@ -22,6 +22,7 @@ const TaskList = () => {
                                 hidden={task.done && hideDone}
                             >
                                 <Button
+                                    doneTask
                                     onClick={() => dispatch(doneTask(task.id))}
                                 >
                                     {task.done ? "✓" : ""}
