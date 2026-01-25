@@ -1,6 +1,6 @@
 # Todo List React
 
-Link for my website: https://hirazuku.github.io/todo-list-react/
+Link for my website: https://mkowalczyk-dev.github.io/todo-list-react/
 
 ![animation](gif/Animation.gif)
 
